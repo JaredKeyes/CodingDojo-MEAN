@@ -1,0 +1,16 @@
+{
+  "name": "discussion_board",
+  "version": "1.0.0",
+  "description": "coding dojo mean stack discussion board",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "author": "Anna Propas",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.15.0",
+    "mongoose": "^4.4.4"
+  }
+}

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Index</title>
+</head>
+<body>
+    <h1>Welcome to the index page</h1>
+
+    <form action="/users" method="post">
+        First Name: <input type="text" name="first_name" />
+        Last Name: <input type="text" name="last_name" />
+        Email: <input type="email" name="email" />
+        DoB: <input type="date" name="dob" />
+
+        <button type="submit">Create User</button>
+    </form>
+
+    <p>Users:</p>
+    <% for (var x in users) { %>
+        <p><a href='/users/<%= users[x]._id %>'><%= users[x].first_name %> <%= users[x].last_name %></a></p>
+        <p><%= users[x].email %> | <%= users[x].dob %></p>
+    <% } %>
+</body>
+</html>

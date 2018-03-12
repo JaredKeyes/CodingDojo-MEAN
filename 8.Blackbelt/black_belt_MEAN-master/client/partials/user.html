@@ -1,0 +1,23 @@
+<div class="container" ng-controller="usersController">
+
+  <nav>
+    <div class="nav-wrapper">
+      <a class="brand-logo heavy">Username: {{user.name}}</a>
+      <ul id="nav-mobile" class="right hide-on-med-and-down">
+        <li><a href="#/dashboard/{{user_id}}">Dashboard</a></li>
+        <li><a href="#/">Logout</a></li>
+      </ul>
+    </div>
+  </nav>
+  <div class="row">
+
+    <p>Posted...</p>
+    <ul class="col s3 offset-s1">
+      <li>{{user.topicsCt}} Topic(s)</li>
+      <li>{{user.postsCt}} Post(s)</li>
+      <li>{{user.commentsCt}} Comment(s)</li>
+    </ul>
+
+  </div>
+
+</div>

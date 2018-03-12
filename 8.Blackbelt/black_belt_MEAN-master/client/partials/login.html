@@ -1,0 +1,7 @@
+<div class="container" ng-controller="loginsController">
+  <p>Hello!</p>
+  <p>please enter your name to join and share your ideas!</p>
+  Name: <input type="text" ng-model="newUser.name">
+  <span ng-if="blank" class="error">* Please enter a name</span></p>
+  <button class="btn" ng-click="addUser()">Enter</button>
+</div>

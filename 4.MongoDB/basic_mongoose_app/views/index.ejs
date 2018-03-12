@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Ninjas</title>
+</head>
+<body>
+    <h5>Ninjas:</h5>
+    <% for (var i = 0, ninjas_length = ninjas.length; i !== ninjas_length; i++) {%>
+        <p>Name: <%= ninjas[i].name %></p>
+
+        <p>Weapons: </p>
+        <% for (var x = 0, weapons_length= ninjas[i].weapons.length; x !== weapons_length; x++) { %>
+            <p><%= ninjas[i].weapons[x] %></p>
+        <% } %>
+    <% } %>
+    <form action="/ninjas" method="post">
+        Name: <input type="text" name="name" />
+        Age: <input type="text" name="age" />
+        Weapons: <input type="text" name="weapons" />
+        <button type="submit">Create Ninja</button>
+    </form>
+</body>
+</html>

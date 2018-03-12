@@ -1,0 +1,42 @@
+<div class="container" ng-controller="topicsController">
+
+  <nav>
+    <div class="nav-wrapper">
+      <ul id="nav-mobile" class="right hide-on-med-and-down">
+        <li><a href="#/dashboard/{{user_id.id}}">Dashboard</a></li>
+        <li class="active"><a>Add a Question</a></li>
+        <li><a href="#/">Logout</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <div class="row">
+    <div class="col s12">
+      <h3>{{topic.name}}</h3>
+      <p>Description: {{topic.desc}}</p>
+    </div>
+  </div>
+
+<form name="form">
+
+  <div class="row">
+      <p class="col s12">Your Answer: <textarea id="textarea1" class="materialize-textarea" placeholder="your answer" ng-model="newPost.text" ng-minlength="5" name="answer"></textarea></p>
+      <p ng-if="form.answer.$error" class="red-text text-accent-4">Answer must be at least 5 characters</p>
+  </div>
+
+  <div class="row">
+      <p class="col s12">Supporting details for your answer (optional): <textarea id="textarea1" class="materialize-textarea" placeholder="details" ng-model="newPost.details"></textarea></p>
+  </div>
+
+  <div class="row">
+    <div class="col s2">
+      <a href="#/dashboard/{{user_id.id}}"><button class="btn">Cancel</button></a>
+    </div>
+    <div class="col s2">
+      <button class="btn" ng-click="addPost()">Submit</button>
+    </div>
+  </div>
+
+  </form>
+
+</div>

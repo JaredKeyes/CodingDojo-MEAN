@@ -1,0 +1,31 @@
+<div class="container" ng-controller="dashboardsController">
+
+  <nav>
+    <div class="nav-wrapper">
+      <a class="brand-logo heavy">Welcome {{user.name}}</a>
+      <ul id="nav-mobile" class="right hide-on-med-and-down">
+        <li><a href="#/dashboard/{{id.id}}">Dashboard</a></li>
+        <li class="active"><a>Add a Question</a></li>
+        <li><a href="#/">Logout</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <h3 class="heavy">New Question</h3>
+  <div class="row">
+      <p class="col s6 offset-s1">Question: <input type="text" ng-model="newTopic.name"></p>
+  </div>
+  <div class="row">
+      <p class="col s6 offset-s1">Description (optional): <textarea id="textarea1" class="materialize-textarea" ng-model="newTopic.desc"></textarea></p>
+  </div>
+
+  <div class="row">
+    <div class="col s2">
+      <a href="#/dashboard/{{id.id}}"><button class="btn">Cancel</button></a>
+    </div>
+    <div class="col s2">
+      <button class="btn" ng-click="addTopic()">Submit</button>
+    </div>
+  </div>
+
+</div>
